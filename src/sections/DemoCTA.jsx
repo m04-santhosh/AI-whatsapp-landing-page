@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Flame, ShieldAlert, Award, ChevronRight } from 'lucide-react';
+import CheckoutButton from '../components/CheckoutButton';
 
 export default function DemoCTA() {
   const [timeLeft, setTimeLeft] = useState(899); // 14 mins 59 secs in seconds
@@ -116,14 +117,12 @@ export default function DemoCTA() {
               </div>
               <p className="text-[11px] text-slate-500 mt-2 font-bold uppercase tracking-wide">ONE-TIME CHARGE. NO CONTINUING FEES.</p>
 
-              {/* Secure Call To Action */}
-              <a
-                href="#lead-form"
-                className="w-full flex items-center justify-center gap-2 mt-6 px-6 py-4 rounded-xl text-base font-extrabold text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 transition-all duration-300 shadow-xl shadow-brand-500/20 hover:-translate-y-0.5 cursor-pointer group"
-              >
-                Secure My Niche Demo
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              <div className="w-full mt-6">
+                <CheckoutButton 
+                  amount={100} 
+                  className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-base font-extrabold text-white bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 transition-all duration-300 shadow-xl shadow-emerald-500/20 hover:-translate-y-0.5 cursor-pointer group"
+                />
+              </div>
 
               {/* Left count indicator */}
               <p className="text-[11px] text-brand-700 mt-3 font-extrabold flex items-center gap-1.5">
