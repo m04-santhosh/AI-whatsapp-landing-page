@@ -120,8 +120,11 @@ export default function DemoCTA() {
               <div className="w-full mt-6">
                 <CheckoutButton 
                   amount={100} 
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-base font-extrabold text-white bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 transition-all duration-300 shadow-xl shadow-emerald-500/20 hover:-translate-y-0.5 cursor-pointer group"
-                />
+                  className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-base font-extrabold text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 transition-all duration-300 shadow-xl shadow-brand-500/20 hover:-translate-y-0.5 cursor-pointer group"
+                >
+                  Secure My Niche Demo
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </CheckoutButton>
               </div>
 
               {/* Left count indicator */}

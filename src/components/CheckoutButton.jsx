@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CheckoutButton = ({ amount = 50000, currency = 'INR', className = '' }) => {
+const CheckoutButton = ({ amount = 50000, currency = 'INR', className = '', children }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -82,15 +82,15 @@ const CheckoutButton = ({ amount = 50000, currency = 'INR', className = '' }) =>
   };
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="w-full flex flex-col items-center">
       <button 
         onClick={handlePayment} 
         disabled={loading}
-        className={`bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-emerald-500/30 transition-all duration-300 ${loading ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}
+        className={`${loading ? 'opacity-50 cursor-not-allowed ' : ''}${className}`}
       >
-        {loading ? 'Processing...' : 'Complete Checkout'}
+        {loading ? 'Processing...' : (children || 'Complete Checkout')}
       </button>
-      {error && <p className="text-red-500 mt-2 text-sm">{error}</p>}
+      {error && <p className="text-red-500 mt-2 text-sm text-center">{error}</p>}
     </div>
   );
 };
