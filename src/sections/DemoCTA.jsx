@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Flame, ShieldAlert, Award, ChevronRight } from 'lucide-react';
 import CheckoutButton from '../components/CheckoutButton';
+import RazorpayPaymentButton from '../components/RazorpayPaymentButton';
 
 export default function DemoCTA() {
   const [timeLeft, setTimeLeft] = useState(899); // 14 mins 59 secs in seconds
@@ -49,10 +50,10 @@ export default function DemoCTA() {
             <div className="lg:col-span-7">
               <div className="badge-premium mb-4 text-emerald-400 bg-emerald-500/10 border-emerald-500/20">
                 <Flame className="w-4 h-4 fill-emerald-400/20 animate-pulse" />
-                <span>₹1 VIP Niche Demo Offer</span>
+                <span>₹9 VIP Niche Demo Offer</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                Unlock Your Custom Niche Demo <span className="text-gradient-emerald">For Just ₹1</span>
+                Unlock Your Custom Niche Demo <span className="text-gradient-emerald">For Just ₹9</span>
               </h2>
               <p className="mt-4 text-base sm:text-lg text-slate-650 leading-relaxed">
                 Don't guess how WhatsApp automation works for your brand. Get a fully interactive, custom prototype tailored specifically for your target business market.
@@ -112,20 +113,12 @@ export default function DemoCTA() {
               {/* Price Details */}
               <div className="flex items-baseline gap-2">
                 <span className="text-slate-400 line-through text-lg font-bold">₹999</span>
-                <span className="text-slate-900 text-5xl font-extrabold tracking-tight">₹1</span>
+                <span className="text-slate-900 text-5xl font-extrabold tracking-tight">₹9</span>
                 <span className="text-brand-700 text-xs font-extrabold bg-brand-500/10 px-2 py-0.5 rounded-full border border-brand-500/25">SAVE 99%</span>
               </div>
               <p className="text-[11px] text-slate-500 mt-2 font-bold uppercase tracking-wide">ONE-TIME CHARGE. NO CONTINUING FEES.</p>
 
-              <div className="w-full mt-6">
-                <CheckoutButton 
-                  amount={100} 
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-base font-extrabold text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 transition-all duration-300 shadow-xl shadow-brand-500/20 hover:-translate-y-0.5 cursor-pointer group"
-                >
-                  Secure My Niche Demo
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </CheckoutButton>
-              </div>
+              <RazorpayPaymentButton paymentButtonId="pl_Sr3nJvQ1zoXo3t" />
 
               {/* Left count indicator */}
               <p className="text-[11px] text-brand-700 mt-3 font-extrabold flex items-center gap-1.5">

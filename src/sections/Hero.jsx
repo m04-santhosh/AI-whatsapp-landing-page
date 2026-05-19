@@ -76,7 +76,7 @@ export default function Hero() {
                 href="#demo"
                 className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-bold text-slate-600 hover:text-slate-800 bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-350 transition-all duration-300 shadow-md shadow-slate-100/50 hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
               >
-                Watch ₹1 Demo
+                Watch ₹9 Demo
               </a>
             </motion.div>
 
